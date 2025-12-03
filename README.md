@@ -15,7 +15,7 @@ The application is built using fundamental **Object-Oriented Programming (OOP) c
 <br>
 
 ### Users can:
-🔑 Login/Register
+🔑 Login/Register<br/>
 🎟️ Add a new booking<br/>
 📜 View all active bookings<br/>
 ❌ Cancel a specific booking<br/>
