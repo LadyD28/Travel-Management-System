@@ -27,14 +27,14 @@ The application is built using fundamental **Object-Oriented Programming (OOP) c
 ## 📁 ┊ PROGRAM STRUCTURE
 ```
 📂 OOP/
-      └── TravelSystem.java          
-      ├── User.java                  
-      ├── Booking.java               
-      ├── Ticket.java                
-      ├── FirstClassTicket.java      
-      ├── BusinessClassTicket.java   
-      ├── EconomyTicket.java         
-      └── README.md                  
+  └── TravelSystem.java          
+  ├── User.java                  
+  ├── Booking.java               
+  ├── Ticket.java                
+  ├── FirstClassTicket.java      
+  ├── BusinessClassTicket.java   
+  ├── EconomyTicket.java         
+  └── README.md                  
 ```
 **CLASS DESCRIPTIONS**<br>
 └── **`TravelSystem`**
