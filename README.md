@@ -1,5 +1,5 @@
 <h1 align = "center">✈️ Travel Management System</h1>
-<h3 align = "center">Console-based flight system </h3>
+<h3 align = "center">A Java console-based flight system </h3>
 <p align = "center">
 <b>BSIT 2110 </b> <br/>
 Cortez, Angela Mae M. <br/>
@@ -14,16 +14,27 @@ This **Travel Management System** is a console application designed to simplify 
 The application is built using fundamental **Object-Oriented Programming (OOP) concepts**— such as encapsulation, inheritance, polymorphism, and abstraction—to provide an authentic and robust booking experience that features data encapsulation, validation, and session management, effectively replicating a real-life travel booking platform.
 <br>
 
+### Users can:
+🔑 Login/Register
+🎟️ Add a new booking<br/>
+📜 View all active bookings<br/>
+❌ Cancel a specific booking<br/>
+🧾 Generate a detailed receipt upon booking completion<br/>
+🚪 Logout and return to main menu
+
+---
+
 ## 📁 ┊ PROGRAM STRUCTURE
 ```
-├── ☕ TravelSystem.java          
-├── ☕ User.java                  
-├── ☕ Booking.java               
-├── ☕ Ticket.java                
-├── ☕ FirstClassTicket.java      
-├── ☕ BusinessClassTicket.java   
-├── ☕ EconomyTicket.java         
-└── ☕ README.md                  
+📂 OOP/
+└── TravelSystem.java          
+├── User.java                  
+├── Booking.java               
+├── Ticket.java                
+├── FirstClassTicket.java      
+├── BusinessClassTicket.java   
+├── EconomyTicket.java         
+└── README.md                  
 ```
 **CLASS DESCRIPTIONS**<br>
 └── **`TravelSystem`**
@@ -114,7 +125,7 @@ FirstClassTicket.calculatePrice(): Price is base price + $300 premium.<br/>
 The Booking class encapsulates a single booking record, containing the traveler's name (travelerName) and the ticket details (ticket). Both fields are declared as private and final, preventing external classes from modifying the booking details directly after creation. Access is provided only through controlled public methods (getTravelerName(), getTicket(), showBooking()).
 
 
-## 6. 🖥️ SAMPLE OUTPUT 
+## 🖥️ ┊SAMPLE OUTPUT 
 
 **This demonstrates:**
 
@@ -246,4 +257,16 @@ GRAND TOTAL CHARGED:    $2660.00
 4. Logout
 =========================================
 Choose:
+```
 
+---
+
+## 👥 ┊ CONTRIBUTORS
+| Name | Role |
+|------|------|
+| **Cortez, Angela Mae M.** | Member |
+| **Dimalibot, Lady Arowen D.** | Member |
+| **Macatangay, Leewell Layne M.** | Member |
+
+## 💖 ACKNOWLEDGEMENT
+We sincerely express our profound gratitude to our instructor for their invaluable guidance and continuous support throughout the completion of this project. Furthermore, we extend our deep appreciation to our classmates and peers for their excellent cooperation, constructive feedback, and unwavering encouragement during the entire development process.
