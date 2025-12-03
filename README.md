@@ -268,5 +268,5 @@ Choose:
 | **Dimalibot, Lady Arowen D.** | Member |
 | **Macatangay, Leewell Layne M.** | Member |
 
-## 💖 ACKNOWLEDGEMENT
+## 💖 ┊ ACKNOWLEDGEMENT
 We sincerely express our profound gratitude to our instructor for their invaluable guidance and continuous support throughout the completion of this project. Furthermore, we extend our deep appreciation to our classmates and peers for their excellent cooperation, constructive feedback, and unwavering encouragement during the entire development process.
