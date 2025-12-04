@@ -97,6 +97,7 @@ class Booking {
     }
 
     
+    
     public void generateReceipt(int destinationIndex) {
         
         double destBase = ticket.getDestinationBasePrice(destinationIndex);
@@ -233,7 +234,7 @@ public class TravelSystem {
         String password = scanner.nextLine();
         
         users.add(new User(username, password));
-        System.out.println("Registered! Please login.");
+        System.out.println("Registered! Please login.\n");
         System.out.println("=========================================");
     }
     
@@ -288,7 +289,7 @@ public class TravelSystem {
         
         try {
             
-            System.out.println("\n============== DESTINATIONS (Economy Base Price) =============");
+            System.out.println("\n=== DESTINATIONS (Economy Base Price) ===");
             for (int i = 0; i < destinations.length; i++) {
                 
                 double basePrice = PRICE_CALCULATOR.getDestinationBasePrice(i);
@@ -297,14 +298,14 @@ public class TravelSystem {
                                                 destinations[i], 
                                                 basePrice));
             }
-            System.out.println("==============================================================");
+            System.out.println("=========================================");
             System.out.print("Choose destination: ");
             int dest = Integer.parseInt(scanner.nextLine()) - 1;
             
             if (dest < 0 || dest >= destinations.length) throw new Exception("Invalid destination.");
 
             
-            System.out.println("\n=============== FLIGHT TIME ===============");
+            System.out.println("\n============== FLIGHT TIME ==============");
             System.out.println(destinations[dest] + ":");
             for (int i = 0; i < flightTimes[dest].length; i++) {
                 System.out.println((i+1) + ". " + flightTimes[dest][i]);
@@ -322,10 +323,10 @@ public class TravelSystem {
             System.out.print("How many travelers? ");
             int numTravelers = Integer.parseInt(scanner.nextLine());
             
-            System.out.println("\n================ TRAVELER DETAILS ================");
+            System.out.println("\n============ TRAVELER DETAILS ===========");
             
             for (int i = 1; i <= numTravelers; i++) {
-                System.out.println("----------------- Traveler " + i + " ------------------");
+                System.out.println("--------------- Traveler " + i + " --------------");
                 
                 System.out.println("Destination: " + destination);
                 double ecoPrice = new EconomyTicket(destination, flightTime).getDestinationBasePrice(dest);
@@ -333,7 +334,7 @@ public class TravelSystem {
                 System.out.println(String.format("1. First Class: ($%.2f)", ecoPrice + 300));
                 System.out.println(String.format("2. Business: ($%.2f)", ecoPrice + 150));
                 System.out.println(String.format("3. Economy: ($%.2f)", ecoPrice));
-                
+                System.out.println("=========================================");
                 System.out.print("Ticket type: ");
                 int ticketType = Integer.parseInt(scanner.nextLine());
                 
@@ -361,6 +362,7 @@ public class TravelSystem {
                     System.out.println("Invalid ticket type. Skipping traveler.");
                 }
             }
+            
             System.out.println("=========================================");
             System.out.println("Bookings added!");
         
@@ -380,14 +382,15 @@ public class TravelSystem {
     }
     
     static void generateCombinedReceipt(String destination, String flightTime, ArrayList<String> names, double initialBase, double destAdj, double totalPrice) {
-        System.out.println("\n============== BOOKING RECEIPT ===============");
+        System.out.println("=========================================");
+        System.out.println("\n============ BOOKING RECEIPT ============");
         System.out.println("Airline: MARIA LEONORA TERESA AIRLINES");
-        System.out.println("------------------ DETAILS -------------------------");
+        System.out.println("--------------- DETAILS -----------------");
         System.out.println("Destination: " + destination);
         System.out.println("Flight Time: " + flightTime);
         System.out.println("Total Travelers: " + names.size());
         System.out.println("Travelers: " + String.join(", ", names)); // List all names
-        System.out.println("------------------- CHARGES ------------------------");
+        System.out.println("----------------- CHARGES ---------------");
          
         double singleDestinationBase = initialBase + destAdj;
         double totalDestinationBase = singleDestinationBase * names.size();
@@ -396,9 +399,9 @@ public class TravelSystem {
         
         System.out.println(String.format("Total Destination Base: $%.2f", totalDestinationBase));
         System.out.println(String.format("Total Class Premium:    $%.2f", totalPremium));
-        System.out.println("----------------------------------------------------");
+        System.out.println("-----------------------------------------");
         System.out.println(String.format("GRAND TOTAL CHARGED:    $%.2f", totalPrice));
-        System.out.println("=====================================================");
+        System.out.println("=========================================");
     }
     
     static void viewBookings() {
